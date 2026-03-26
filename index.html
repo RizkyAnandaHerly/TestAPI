@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="navbar">
+    <div id="brand">
+      <h1>Meal Finder</h1>
+      <button id="theme-btn">🌙 Dark Mode</button>
+    </div>
+    <div id="controls">
+      <input type="text" id="search-input" placeholder="🔍 Search meal...">
+      <select id="category-select">
+        <option value="">All Category</option>
+      </select>
+      <button id="fav-filter-btn">❤️ My Favorites</button>
+      <button id="surprise-btn">🎲 Surprise Me!</button>
+    </div>
+  </div>
+
+  <div id="hero">
+    <h2>Discover Your Next Favorite Meal</h2>
+    <p>Search from thousands of recipes around the world</p>
+  </div>
+
+  <div id="meal-container"></div>
+
+  <div id="modal-overlay">
+    <div id="modal">
+      <button id="modal-close">✕</button>
+      <img id="modal-img" src="" alt="">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+        <h2 id="modal-title"></h2>
+        <button id="modal-fav-btn" style="
+          background: #f1f5f9;
+          border: none;
+          font-size: 20px;
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          cursor: pointer;
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s;
+        ">🤍</button>
+      </div>
+      <p id="modal-category"></p>
+      <div id="modal-ingredients"></div>
+      <div id="modal-video"></div>
+      <h3>Instructions</h3>
+      <p id="modal-instructions"></p>
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>Data from <a href="https://www.themealdb.com" target="_blank">TheMealDB API</a> • Built with HTML, CSS &
+      JavaScript</p>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
